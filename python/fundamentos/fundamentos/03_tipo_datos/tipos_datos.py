@@ -59,7 +59,7 @@ Tarea = [
 print(Tarea[3][3])
 
 
-#🔒 2)Tuplas: Tipo de datos inmutable (que no se puede modificar) y contiene un conjunto de distintos valores. 
+#🔒 3)Tuplas: Tipo de datos inmutable (que no se puede modificar) y contiene un conjunto de distintos valores. 
 #Pueden contener distintos tipos de datos.
 #() Las Paréntesis se usan para Tuplas
 #Ejemplo: ("Lunes", "martes")
@@ -70,34 +70,67 @@ perro[2] = "comida de perro"
 #ERROR: Las tuplas no pueden ser modificadas (TypeError: 'tuple' object does not support item assignment)
 
 
-#🗂️ 3)Diccionarios: Nos permite almacenar contenido a través de una llave y un valor. 
+#🗂️ 4)Diccionarios: Nos permite almacenar contenido a través de una llave y un valor. 
 #Podemos acceder a sus datos a través de su índice único (que en este caso llamaremos llave o clave). 
 #Encuentra algunos métodos integrados de los diccionarios aquí.
 
 
 diccionario_vacio = {}
-persona = {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False}
-persona['nombre'] = 'Valeria'  # Actualiza si el valor de la llave existente
-persona['hobbies'] = ['jugar videojuegos', 'programación'] 
+#Forma de almacenar datos en un diccionario: {`llave`: `valor`}
+#JSON = Tipo de dato que se utiliza para almacenar información en un formato de texto plano.
+#Es muy utilizado en la web para intercambiar información entre el cliente y el servidor.
 
-# Agrega esa clave-valor si no existía previamente
+persona = {
+    'nombre': 'Carmen', 
+    'edad': 31, 
+    'altura': 1.71, 
+    'usa_lentes': False}
+persona['nombre'] = 'Valeria'  # Actualiza si el valor de la llave existente
+persona['hobbies'] = ['jugar videojuegos', 'programación'] # Agrega esa clave-valor si no existía previamente
+#TAREA
+#Incorpora nuevas llaves a 'persona'
+#Profesión, comida favorita, mascotas, peliculas_favoritas
+persona['nombre'] = 'Tomás'
+persona['edad'] = 17
+persona['altura'] = 1.71
+persona['usa_lentes'] = True
+persona['profesión'] = 'Estudiante'
+persona['comida_favorita'] = 'Lasaña'
+persona['mascotas'] = ['Pug', 'Bulldog Francés', 'Gato']
+persona['peliculas_favoritas'] = ['Real Steel', 'Mortadelo y Filemón contra Jimmy el Cachondo', 'Jujutsu Kaisen 0']
 print(persona)
 
-# Imprime: {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False, 'hobbies': 
-# ['jugar videojuegos', 'programación']}
+# Imprime: {
+# 'nombre': 'Tomás', 
+# 'edad': 17, 
+# 'altura': 1.71, 
+# 'usa_lentes': True, 
+# 'hobbies': ['jugar videojuegos', 'programación'], 
+# 'profesión': 'Estudiante', 
+# 'comida_favorita': 'Lasaña', 
+# 'mascotas': ['Pug', 'Bulldog Francés', 'Gato'], 
+# 'peliculas_favoritas': ['Real Steel', 'Mortadelo y Filemón contra Jimmy el Cachondo', 'Jujutsu Kaisen 0']}
 altura = persona.pop('altura')  # Elimina la clave indicada y devuelve el valor
 print(altura)    # Imprime: 1.71
 print(persona) 
 
-# salida: {'nombre': 'Carmen', 'edad': 31, 'usa_lentes': False, 'hobbies': ['jugar videojuegos', 'programación']} 
-#⚙️ Funciones comunes
+# salida: {
+# 'nombre': 'Carmen', 
+# 'edad': 31, 
+# 'usa_lentes': False, 
+# 'hobbies': ['jugar videojuegos', 'programación']}
+
+
+#⚙️ 5)Funciones comunes
 #En caso de no conocer el tipo de dato de una variable o valor, 
-#gracias a la función type podemos saberlo fácilmente. Por ejemplo:
-print(type(3.1416)) #Imprime: <class 'float'>
-print(type(persona)) #Imprime <class 'dict'>
+#gracias a la función type podemos saberlo fácilmente. 
+# Por ejemplo:
+
+print(type(3.1416)) #Imprime: <class 'float'> = type
+print(type(persona)) #Imprime <class 'dict'> = diccionario
 
 #En tipos de datos que tienen tamaño (por ejemplo: listas, tuplas, diccionarios, cadenas), 
-#podemos usar la función len, que es diminutivo de length (tamaño en español) y 
+#podemos usar la función 'len', que es diminutivo de 'length' (tamaño en español) y 
 #que nos regresa la longitud de este.
-print(len(persona)) #Imprime: 4 (la cantidad de pares de clave-valor)
+print(len(persona)) #Imprime: 7 (la cantidad de pares de clave-valor)
 print(len("Me encanta programar")) #Imprime: 20

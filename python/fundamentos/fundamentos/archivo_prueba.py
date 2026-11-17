@@ -1,10 +1,12 @@
-#Tarea
-#Crear una variable de 4x4 y mostrar el número 16 en la terminal.
+# 🧮 4)%-formatting
+# Quizás en algún código te puedas topar con un método que se utilizaba antes de que existiera 
+# las formas vistas antes de interpolación. En lugar de utilizar llaves, se utiliza el símbolo % 
+# para indicar un parámetro; %s para indicar una cadena y %d para indicar un número. 
+# Una vez establecida la cadena, se coloca de nuevo % para separar el texto de las variables que serán 
+# interpoladas. 
+# Por ejemplo:
 
-Tarea = [
-    [1,2,3,4],
-    [5,6,7,8],
-    [9,10,11,12],
-    [13,14,15,16]
-]
-print(Tarea[3][3])
+nombre5 = input("Ingrese su nombre: ")
+edad3 = 29
+print("Mi nombre es %s y tengo %d años de edad." % (nombre5, edad3))
+# #Imprime: Mi nombre es Marcelo y tengo 29 años de edad.
